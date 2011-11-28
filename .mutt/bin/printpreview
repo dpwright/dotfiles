@@ -1,0 +1,6 @@
+#!/bin/bash
+
+PDFVIEWER=$1
+TMP="$(mktemp).pdf"
+muttprint -p - | ps2pdf - "$TMP" && "$PDFVIEWER" "$TMP"
+

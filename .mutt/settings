@@ -1,0 +1,63 @@
+set header_cache     =~/.mutt/cache/headers
+set message_cachedir =~/.mutt/cache/bodies
+set certificate_file =~/.mutt/certificates
+
+set editor = "/usr/bin/vim +/^$/+1 +:nohl +':set tw=72'"
+set attribution = "\n\n%n (%d) >>"
+
+set move             = no
+
+set sort             = "threads"
+set sort_aux         = "last-date-received"
+set smart_wrap       = yes
+unset markers
+
+set menu_scroll      = yes
+set pager_index_lines = 10
+set pager_context = 5
+set delete
+unset mark_old
+
+set tilde
+
+set include
+set edit_headers
+set fast_reply
+set fcc_attach
+set forward_format = "Fwd: %s"
+set forward_decode
+set reply_to
+set reverse_name
+set forward_quote
+
+set wait_key=no
+
+set auto_tag
+
+set mail_check = 15
+set timeout = 15
+
+ignore "Authentication-Results:"
+ignore "DomainKey-Signature:"
+ignore "DKIM-Signature:"
+
+hdr_order Date From To Cc
+
+auto_view text/html
+alternative_order text/plain
+
+#printpreview is a script I wrote which calls muttprint then opens the
+#output in the pdf viewer specified as the first argument
+set print_command="~/.mutt/bin/printpreview evince"
+set print=yes
+
+# Address book management
+# I use abook to manage addresses, but automatically export to mutt alias files
+# when I quit Aqua for abook searches fields other than Full Name, useful for
+# searching Japanese names by reading (I put the reading in abook's "memo"
+# field)
+set alias_file=~/.mutt-alias
+set query_command= "aqua '%s'"
+macro generic,index,pager \ca "!~/.mutt/bin/abook-autoexport\n:source ~/.mutt/aliases\n" "Launch abook"
+macro index,pager A "|~/.mutt/bin/abook-autoexport --add-email-quiet\n:source ~/.mutt/aliases\n" "Add the sender address to abook"
+

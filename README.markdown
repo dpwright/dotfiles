@@ -25,3 +25,29 @@ perform, switchable with <Cmd-key>Fn, where n is the workspace number.
 
 There is a set of scripts for ratpoison called rpws which accomplish a similar
 task, but somehow I never quite got along with them so I wrote my own.
+
+## mutt
+
+My mutt configuration files are broken down into sections which are stored in
+the ~/.mutt folder and sourced by my ~/.muttrc.  I have not committed my
+accounts file for obvious reasons.
+
+I make use of a number of external tools in my mutt setup.  Of course you can
+take a look at my settings and copy what you like but if you want to use all of
+my mutt files as-is you will need the following prerequisites:-
+
+* [muttprint](http://muttprint.sourceforge.net/)
+  * ...which in turn requires Perl and LaTeX
+  * My copy of muttprint is slightly customised to allow for better printing of
+    Japanese in emails.  If I find time I'd like to submit my changes as a
+    FreeBSD port or something.
+* [mhtview](http://devio.us/~ndr/sw/mhtview.php)
+  * I customised mine to open the file in firefox instead of opera
+* [abook](http://abook.sourceforge.net/)
+* [aqua](http://www.chipstips.com/?p=550)
+* Any PDF viewer
+
+Thanks to [Armin Wolfermann](http://wolfermann.org/) for his
+[abook-autoexport](http://www.wolfermann.org/abook-autoexport) script which I
+have copied into the .mutt/bin folder.
+
