@@ -25,7 +25,7 @@ I then run "cd ~/.todo; vim -S .session" to get a little vim-based TODO list.
 I stole my prompt from Cygwin.  I tend to modify the colour across different
 machines so I can keep track of which one I'm working with.
 
-bash: :q: コマンドが見つかりません
+Other than that, just a few aliases and settings.
 
 ## ratpoison
 
