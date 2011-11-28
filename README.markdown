@@ -51,3 +51,7 @@ Thanks to [Armin Wolfermann](http://wolfermann.org/) for his
 [abook-autoexport](http://www.wolfermann.org/abook-autoexport) script which I
 have copied into the .mutt/bin folder.
 
+## newsbeuter
+
+I use newsbeuter to read various RSS feeds.  The configuration just gives me
+some vim-like bindings for navigating the feed list
