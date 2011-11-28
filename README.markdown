@@ -20,6 +20,13 @@ a submodule to this one, so changes made there should propagate here as well.
 In addition to this, I have a little vim session file stored in .todo/.session.
 I then run "cd ~/.todo; vim -S .session" to get a little vim-based TODO list.
 
+## bash
+
+I stole my prompt from Cygwin.  I tend to modify the colour across different
+machines so I can keep track of which one I'm working with.
+
+bash: :q: コマンドが見つかりません
+
 ## ratpoison
 
 Ratpoison is my window manager of choice across systems using X-Windows.  I have
