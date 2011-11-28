@@ -31,7 +31,7 @@ Other than that, just a few aliases and settings.
 
 Ratpoison is my window manager of choice across systems using X-Windows.  I have
 a rather script-driven setup with different workspaces for different tasks I
-perform, switchable with <Cmd-key>Fn, where n is the workspace number.
+perform, switchable with &lt;Cmd-key&gt;Fn, where n is the workspace number.
 
 There is a set of scripts for ratpoison called rpws which accomplish a similar
 task, but somehow I never quite got along with them so I wrote my own.
