@@ -1,0 +1,26 @@
+#!/bin/bash
+
+ratpoison -c "fselect 0"
+ratpoison -c "select -"
+ratpoison -c "fselect 1"
+ratpoison -c "select -"
+ratpoison -c "fselect 2"
+ratpoison -c "select -"
+ratpoison -c "fselect 3"
+ratpoison -c "select -"
+ratpoison -c "fselect 4"
+ratpoison -c "select -"
+
+ratpoison -c "fselect 0"
+ratpoison -c "select vim"
+ratpoison -c "fselect 1"
+ratpoison -c "select term-left"
+ratpoison -c "fselect 3"
+ratpoison -c "select term-right"
+ratpoison -c "fselect 2"
+ratpoison -c "select todo"
+ratpoison -c "fselect 4"
+ratpoison -c "select mailnotify"
+
+ratpoison -c "fselect 0"
+

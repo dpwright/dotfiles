@@ -1,0 +1,5 @@
+#!/bin/bash
+
+LASTMODE=$(ratpoison -c "getenv mode")
+ratpoison -c "fdump" > ~/.ratpoison/$LASTMODE
+

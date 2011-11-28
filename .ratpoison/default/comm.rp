@@ -1,0 +1,17 @@
+#!/bin/bash
+
+ratpoison -c "fselect 0"
+ratpoison -c "select -"
+ratpoison -c "fselect 1"
+ratpoison -c "select -"
+ratpoison -c "fselect 2"
+ratpoison -c "select -"
+
+ratpoison -c "fselect 0"
+ratpoison -c "select mutt"
+ratpoison -c "fselect 1"
+ratpoison -c "select news"
+ratpoison -c "fselect 2"
+ratpoison -c "select irc"
+
+ratpoison -c "fselect 0"

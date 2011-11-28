@@ -1,0 +1,8 @@
+#!/bin/bash
+
+NEWMODE=$1
+
+ratpoison -c "gselect $NEWMODE"
+ratpoison -c "frestore `cat ~/.ratpoison/$NEWMODE`"
+ratpoison -c "setenv mode $NEWMODE"
+

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+NEWMODE=$1
+SCRIPTDIR="$(dirname "$0")"
+
+"$SCRIPTDIR"/modesave.rp
+"$SCRIPTDIR"/modeload.rp $NEWMODE
+

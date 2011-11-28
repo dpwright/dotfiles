@@ -1,0 +1,5 @@
+#!/bin/bash
+
+ratpoison -c "fselect 0"
+ratpoison -c "only"
+ratpoison -c "select 0"
