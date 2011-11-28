@@ -17,3 +17,11 @@ The following program configurations are included:
 My [vim.setup](https://github.com/dpwright/vim.setup) project has been added as
 a submodule to this one, so changes made there should propagate here as well.
 
+## ratpoison
+
+Ratpoison is my window manager of choice across systems using X-Windows.  I have
+a rather script-driven setup with different workspaces for different tasks I
+perform, switchable with <Cmd-key>Fn, where n is the workspace number.
+
+There is a set of scripts for ratpoison called rpws which accomplish a similar
+task, but somehow I never quite got along with them so I wrote my own.
