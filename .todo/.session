@@ -1,0 +1,12 @@
+set nonumber
+
+edit todo
+tabedit done
+tabedit wishlist
+tabedit notes
+tabedit personal
+tabnext 1
+
+nnoremap <tab> gt
+nnoremap <s-tab> gT
+

@@ -17,6 +17,9 @@ The following program configurations are included:
 My [vim.setup](https://github.com/dpwright/vim.setup) project has been added as
 a submodule to this one, so changes made there should propagate here as well.
 
+In addition to this, I have a little vim session file stored in .todo/.session.
+I then run "cd ~/.todo; vim -S .session" to get a little vim-based TODO list.
+
 ## ratpoison
 
 Ratpoison is my window manager of choice across systems using X-Windows.  I have
