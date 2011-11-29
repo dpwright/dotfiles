@@ -7,19 +7,19 @@ sleep 5
 
 ratpoison -c "gselect work"
 
-ratpoison -c "exec xterm -T \"vim\"         -e /bin/bash -l -c \"make_project_tags.sh && vim\""
-ratpoison -c "exec xterm -T \"todo\"        -e /bin/bash -l -c \"cd ~/.todo && vim -S .session\""
-ratpoison -c "exec xterm -T \"term-left\"   " 
-ratpoison -c "exec xterm -T \"term-right\"  " 
-ratpoison -c "exec xterm -T \"mailnotify\"  -e /bin/bash -l -c \"displaynewmail\"" 
+ratpoison -c "exec sakura -t \"vim\"         -e /bin/bash -l -c 'make_project_tags.sh && vim'"
+ratpoison -c "exec sakura -t \"todo\"        -e /bin/bash -l -c 'cd ~/.todo && vim -S .session'"
+ratpoison -c "exec sakura -t \"term-left\"   -e /bin/bash -l"
+ratpoison -c "exec sakura -t \"term-right\"  -e /bin/bash -l"
+ratpoison -c "exec sakura -t \"mailnotify\"  -e /bin/bash -l -c 'displaynewmail'"
 
 sleep 5
 
 ratpoison -c "gselect comm"
 
-ratpoison -c "exec xterm -t \"mutt\"        -e /bin/bash -l -c mutt"
-ratpoison -c "exec xterm -t \"news\"        -e /bin/bash -l -c newsbeuter"
-ratpoison -c "exec xterm -t \"irc\"         -e /bin/bash -l -c irssi"
+ratpoison -c "exec sakura -t \"mutt\"        -e /bin/bash -l -c mutt"
+ratpoison -c "exec sakura -t \"news\"        -e /bin/bash -l -c newsbeuter"
+ratpoison -c "exec sakura -t \"irc\"         -e /bin/bash -l -c irssi"
 
 sleep 3
 

@@ -1,9 +1,9 @@
 escape M-k
 bind w exec firefox
-bind c exec xterm
-bind v exec xterm -T vim -e /bin/bash -l -c vim
-bind m exec xterm -T mutt -e /bin/bash -l -c mutt
-bind i exec xterm -T irc -e /bin/bash -l -c irssi
+bind c exec sakura -e /bin/bash -l
+bind v exec sakura -t vim -e /bin/bash -l -c vim
+bind m exec sakura -t mutt -e /bin/bash -l -c mutt
+bind i exec sakura -t irc -e /bin/bash -l -c irssi
 
 bind I info
 

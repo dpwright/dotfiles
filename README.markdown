@@ -65,3 +65,9 @@ have copied into the .mutt/bin folder.
 
 I use newsbeuter to read various RSS feeds.  The configuration just gives me
 some vim-like bindings for navigating the feed list
+
+## sakura
+
+I switched from xterm to [sakura](https://launchpad.net/sakura) because the font
+used for Japanese text in xterm is difficult to read and fails when colour is
+set to bright.  Configuration just sets my font and colour preferences.
