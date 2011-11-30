@@ -7,11 +7,9 @@ sleep 5
 
 ratpoison -c "gselect work"
 
-ratpoison -c "exec sakura -t \"vim\"         -e /bin/bash -l -c 'make_project_tags.sh && vim'"
-ratpoison -c "exec sakura -t \"todo\"        -e /bin/bash -l -c 'cd ~/.todo && vim -S .session'"
+ratpoison -c "exec sakura -t \"vim\"         -e /bin/bash -l -c vim"
 ratpoison -c "exec sakura -t \"term-left\"   -e /bin/bash -l"
 ratpoison -c "exec sakura -t \"term-right\"  -e /bin/bash -l"
-ratpoison -c "exec sakura -t \"mailnotify\"  -e /bin/bash -l -c 'displaynewmail'"
 
 sleep 5
 
