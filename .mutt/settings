@@ -2,7 +2,7 @@ set header_cache     =~/.mutt/cache/headers
 set message_cachedir =~/.mutt/cache/bodies
 set certificate_file =~/.mutt/certificates
 
-set editor = "/usr/bin/vim +/^$/+1 +:nohl +':set tw=72'"
+set editor = "vim +/^$/+1 +:nohl +':set tw=72'"
 set attribution = "\n\n%n (%d) >>"
 
 set move             = no
@@ -48,7 +48,8 @@ alternative_order text/plain
 
 #printpreview is a script I wrote which calls muttprint then opens the
 #output in the pdf viewer specified as the first argument
-set print_command="~/.mutt/bin/printpreview evince"
+#set print_command="~/.mutt/bin/printpreview epdfview"
+set print_command="cat > test"
 set print=yes
 
 # Address book management
