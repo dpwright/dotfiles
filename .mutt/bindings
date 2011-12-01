@@ -7,7 +7,6 @@ bind index       M       middle-page
 bind index       L       bottom-page
 bind index,pager \cU     half-up
 bind index,pager \cD     half-down
-bind index,pager $       imap-fetch-mail
 bind index,pager R       group-reply
 bind index,pager ,l list-reply
 
