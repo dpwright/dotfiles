@@ -2,10 +2,7 @@
 set sidebar_width=24
 set sidebar_visible=no
 set sidebar_delim='|'
-set sidebar_sort=yes
-
-# which mailboxes to list in the sidebar
-#mailboxes =inbox =ml
+set sidebar_sort=no
 
 # color of folders with new mail
 color sidebar_new yellow default
@@ -21,14 +18,14 @@ bind index,pager \CO sidebar-open
 # sidebar-scroll-down
 
 # b toggles sidebar visibility
-macro index b '<enter-command>toggle sidebar_visible<enter>'
-macro pager b '<enter-command>toggle sidebar_visible<enter>'
+#macro index b '<enter-command>toggle sidebar_visible<enter>'
+#macro pager b '<enter-command>toggle sidebar_visible<enter>'
 
 # Remap bounce-message function to "B"
 bind index B bounce-message
 
 #
 # Mario Holbe suggests:
-# macro index b '<enter-command>toggle sidebar_visible<enter><refresh>'
-# macro pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
+ macro index b '<enter-command>toggle sidebar_visible<enter><refresh>'
+ macro pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
 #

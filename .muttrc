@@ -5,3 +5,5 @@ source .mutt/bindings
 source .mutt/colours
 source .mutt/accounts
 
+source .mutt/sidebar
+
