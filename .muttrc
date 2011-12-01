@@ -1,9 +1,9 @@
 set realname         = "Daniel P. Wright"
 
-source .mutt/settings
-source .mutt/bindings
-source .mutt/colours
-source .mutt/accounts
+source ~/.mutt/settings
+source ~/.mutt/bindings
+source ~/.mutt/colours
+source ~/.mutt/accounts
 
-source .mutt/sidebar
+source ~/.mutt/sidebar
 
