@@ -44,5 +44,3 @@ gnewbg bg
 #exec .ratpoison/init.rp
 #exec .ratpoison/modeload.rp work
 
-exec sakura -e /bin/bash -l
-
