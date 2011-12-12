@@ -1,0 +1,7 @@
+#text/html; lynx -assume_charset=%{charset} %s; nametemplate=%s.html
+#text/html; lynx -assume_charset=%{charset} -dump %s; nametemplate=%s.html; copiousoutput
+text/html; firefox -new-window %s & sleep 5; nametemplate=%s.html
+text/html; w3m -I %{charset} -dump %s; nametemplate=%s.html; copiousoutput
+image/*; xzgv %s; edit=gimp %s;
+application/pdf; xpdf /dev/stdin
+application/pdf; pdftotext -layout /dev/stdin -; copiousoutput
