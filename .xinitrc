@@ -45,7 +45,8 @@ ${XIM_PROGRAM} ${XIM_ARGS} &
 x11vnc -display :0 -never-shared -forever -usepw &
 
 xsetroot -display :0.0 -solid Black &
+unclutter &
 numlockx
 
-exec ratpoison
+exec awesome
 
