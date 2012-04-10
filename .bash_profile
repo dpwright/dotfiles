@@ -21,4 +21,7 @@ export PAGER=lv
 alias ls='ls -G'
 alias vimroom='vim +VimroomToggle +mat "+set wrap"'
 alias vncd='x11vnc -usepw -display ":0"'
+alias tmux='tmux -2' #Enable 256-colour tmux by default
+
+source ~/bin/sdkpaths.sh
 
