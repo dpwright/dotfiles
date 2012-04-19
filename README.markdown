@@ -16,11 +16,15 @@ The following program configurations are included:
 
 Clone the repo:
 
-    git clone --recursive git://github.com/dpwright/dotfiles.git 
+```bash
+git clone --recursive git://github.com/dpwright/dotfiles.git 
+```
 
 And then run the installer:
 
+```bash
     dotfiles/install.sh
+```
 
 The installer just sets up symlinks to the dotfiles contained within.  You could
 selectively symlink just the ones you want to use instead, if you like.
