@@ -23,7 +23,7 @@ git clone --recursive git://github.com/dpwright/dotfiles.git
 And then run the installer:
 
 ```bash
-    dotfiles/install.sh
+dotfiles/install.sh
 ```
 
 The installer just sets up symlinks to the dotfiles contained within.  You could
