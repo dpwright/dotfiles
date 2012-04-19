@@ -31,7 +31,7 @@ I have recently removed my vim setup as a submodule from this repo.  If you'd
 like my vim setup, please clone the [.vim](https://github.com/dpwright/.vim)
 repository separately.
 
-I  so have a little vim session file stored in .todo/.session, which gives me
+I do have a little vim session file stored in .todo/.session, which gives me
 tasklist-like functionality in vim.  Since it isn't really a part of my vim
 setup, I've kept  that in this repo for now.  Use "cd ~/.todo; vim -S .session"
 to use it.
