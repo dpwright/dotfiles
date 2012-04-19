@@ -4,7 +4,7 @@ I use quite a lot of systems.  I have two macs at home, a \*nix box which runs
 Ubuntu and FreeBSD at work, and a Windows box running Cygwin.  Keeping
 configuration files synced between my different machines, and migrating settings
 to a new machine, has started to become quite a headache.  I've already made a
-project for [my vim setup](https://github.com/dpwright/vim.setup), so the next
+project for [my vim setup](https://github.com/dpwright/.vim), so the next
 obvious step was to upload the rest of my commonly-used configuration files.
 
 I shall try and avoid uploading anything with passwords or other sensitive
@@ -12,13 +12,29 @@ information in.  That would be embarrassing.
 
 The following program configurations are included:
 
+## Installation
+
+Clone the repo:
+
+    git clone --recursive git://github.com/dpwright/dotfiles.git 
+
+And then run the installer:
+
+    dotfiles/install.sh
+
+The installer just sets up symlinks to the dotfiles contained within.  You could
+selectively symlink just the ones you want to use instead, if you like.
+
 ## vim
 
-My [vim.setup](https://github.com/dpwright/vim.setup) project has been added as
-a submodule to this one, so changes made there should propagate here as well.
+I have recently removed my vim setup as a submodule from this repo.  If you'd
+like my vim setup, please clone the [.vim](https://github.com/dpwright/.vim)
+repository separately.
 
-In addition to this, I have a little vim session file stored in .todo/.session.
-I then run "cd ~/.todo; vim -S .session" to get a little vim-based TODO list.
+I  so have a little vim session file stored in .todo/.session, which gives me
+tasklist-like functionality in vim.  Since it isn't really a part of my vim
+setup, I've kept  that in this repo for now.  Use "cd ~/.todo; vim -S .session"
+to use it.
 
 ## bash
 
