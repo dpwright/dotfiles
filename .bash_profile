@@ -32,5 +32,10 @@ alias vimroom='vim +VimroomToggle +mat "+set wrap"'
 alias vncd='x11vnc -usepw -display ":0"'
 alias tmux='tmux -2' #Enable 256-colour tmux by default
 
+#Linux works differently
+if [ "${OSTYPE}" == "linux-gnu" ] || [ "${OSTYPE}" == "linux" ]; then
+	alias ls='ls --color=always'
+fi
+
 source ~/bin/sdkpaths.sh
 
