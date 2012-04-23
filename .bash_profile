@@ -23,8 +23,6 @@ export LC_CTYPE=ja_JP.UTF-8
 
 export PATH=~/bin:$PATH
 
-export PS1="\n\[\e[$COL\]\u@\h \[\e[33m\]\w\[\e[0m\]\n\$"
-
 export PAGER=lv
 
 alias ls='ls -G'
@@ -36,6 +34,14 @@ alias tmux='tmux -2' #Enable 256-colour tmux by default
 if [ "${OSTYPE}" == "linux-gnu" ] || [ "${OSTYPE}" == "linux" ]; then
 	alias ls='ls --color=always'
 fi
+
+source .bash_completion.d/*
+
+export GIT_PS1_SHOWDIRTYSTATE=1     #... untagged(*) and staged(+) changes
+export GIT_PS1_SHOWSTASHSTATE=1     #... if something is stashed($)
+export GIT_PS1_SHOWUNTRACKEDFILES=1 #... untracked files(%)
+
+export PS1='\n\[\e[$COL\]\u@\h \[\e[33m\]\w\[\e[1;30m\]$(__git_ps1 " (%s)")\[\e[0m\]\n\$'
 
 source ~/bin/sdkpaths.sh
 
