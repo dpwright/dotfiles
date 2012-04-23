@@ -8,10 +8,11 @@ then
 fi
 
 case $HOSTNAME in
+	cardinals*)  COL='31m';;   #Red
 	furnace*)    COL='32m';;   #Green
+	horace*)     COL='45;30m';; #Pink BG
 	forge*)      COL='34m';;   #Blue
 	mojo*)       COL='35m';;   #Pink
-	cardinals*)  COL='31m';;   #Red
 	dd-macbook*) COL='36m';;   #Cyan
 	*)           COL='37m';;   #White
 esac
