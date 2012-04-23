@@ -36,7 +36,7 @@ if [ "${OSTYPE}" == "linux-gnu" ] || [ "${OSTYPE}" == "linux" ]; then
 	alias ls='ls --color=always'
 fi
 
-source .bash_completion.d/*
+source ~/.bash_completion.d/*
 
 export GIT_PS1_SHOWDIRTYSTATE=1     #... untagged(*) and staged(+) changes
 export GIT_PS1_SHOWSTASHSTATE=1     #... if something is stashed($)
