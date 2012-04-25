@@ -5,6 +5,7 @@ FILES_TO_INSTALL="
 	.bash_profile
 	.config
 	.fonts.conf
+	.irssi
 	.mailcap
 	.mutt
 	.muttprintrc
