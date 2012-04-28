@@ -11,9 +11,10 @@ case $HOSTNAME in
 	cardinals*)  COL='31m';;   #Red
 	furnace*)    COL='32m';;   #Green
 	horace*)     COL='45;30m';; #Pink BG
-	forge*)      COL='34m';;   #Blue
+	forge*)      COL='44;37m';; #Blue BG
 	mojo*)       COL='35m';;   #Pink
 	dd-macbook*) COL='36m';;   #Cyan
+	dd-macmini*) COL='34m';;   #Blue
 	*)           COL='37m';;   #White
 esac
 
