@@ -29,20 +29,18 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 layouts =
 {
-    awful.layout.suit.floating,
-    awful.layout.suit.tile,
     awful.layout.suit.max,
     awful.layout.suit.max.fullscreen,
-    awful.layout.suit.magnifier
+    awful.layout.suit.tile
 }
 -- }}}
 
 -- {{{ Tags
 -- Define a tag table which hold all screen tags.
 tags = {
-	names = { "work", "comm", "www", "misc", "anki", 6, 7, "forge", "build" },
-	layout = { layouts[3], layouts[2], layouts[3], layouts[2], layouts[3],
-	           layouts[2], layouts[2], layouts[4], layouts[4]
+	names = { "term", "www", "remote", "4", "5", 6, "7", "8", "9" },
+	layout = { layouts[2], layouts[1], layouts[2], layouts[1], layouts[1],
+	           layouts[1], layouts[1], layouts[1], layouts[1]
 	}
 }
 
@@ -73,24 +71,6 @@ mylauncher = awful.widget.launcher({ image = image(beautiful.awesome_icon),
 -- {{{ Wibox
 -- Create a textclock widget
 mytextclock = awful.widget.textclock({ align = "right" })
-
--- Create a mail widget (http://awesome.naquadah.org/wiki/Asmer_imap_mail_widget)
-mymail = widget({ type = "textbox", align = "right" })
-mymail.text = "  ?  "
-awful.hooks.timer.register(30, function ()
-	local f = io.open("~/tmp/gmail") 
-	local l = nil
-	if f ~= nil then
-		l = f:read()
-	else
-		l = "  FAIL  "
-	end
-	f:close()
-
-	mymail.text = l
-	os.execute("unread.py > ~/tmp/gmail &")
-end)
-
 
 -- Create a systray
 mysystray = widget({ type = "systray" })
@@ -244,6 +224,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey            }, "m",     function () awful.util.spawn("sakura -t mutt -e /bin/bash -l -c mutt") end),
     awful.key({ modkey            }, "n",     function () awful.util.spawn("sakura -t newsbeuter -e /bin/bash -l -c newsbeuter") end),
     awful.key({ modkey            }, "i",     function () awful.util.spawn("sakura -t irssi -e /bin/bash -l -c irssi") end),
+    awful.key({ modkey            }, "a",     function () awful.util.spawn("sakura -e tmux attach") end),
 
     -- Prompt
     awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),
