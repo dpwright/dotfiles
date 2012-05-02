@@ -4,7 +4,9 @@ FILES_TO_INSTALL="
 	.bash_completion.d
 	.bash_profile
 	.config
+	.cvsignore
 	.fonts.conf
+	.gitconfig
 	.irssi
 	.mailcap
 	.mutt
