@@ -14,6 +14,7 @@ FILES_TO_INSTALL="
 	.muttrc
 	.newsbeuter
 	.pentadactyl
+	.pentadactylrc
 	.ratpoison
 	.ratpoisonrc
 	.tmux.conf
