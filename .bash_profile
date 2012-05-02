@@ -26,7 +26,7 @@ export LC_CTYPE=ja_JP.UTF-8
 
 export PATH=~/bin:$PATH
 
-export PAGER=lv
+export PAGER="lv -c"
 
 alias ls='ls -G'
 alias vimroom='vim +VimroomToggle +mat "+set wrap"'
