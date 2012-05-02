@@ -13,6 +13,7 @@ FILES_TO_INSTALL="
 	.muttprintrc
 	.muttrc
 	.newsbeuter
+	.pentadactyl
 	.ratpoison
 	.ratpoisonrc
 	.tmux.conf
