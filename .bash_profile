@@ -18,7 +18,8 @@ case $HOSTNAME in
 	*)           COL='37m';;   #White
 esac
 
-export TERM='xterm'
+source ~/bin/termset.sh
+
 export EDITOR="vim"
 export LANG=ja_JP.UTF-8
 export LC_CTYPE=ja_JP.UTF-8
