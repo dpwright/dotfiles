@@ -20,4 +20,5 @@
 	added = yellow
 	changed = green
 	untracked = cyan
-
+[github]
+	user = dpwright
