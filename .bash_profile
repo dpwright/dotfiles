@@ -45,6 +45,10 @@ export GIT_PS1_SHOWSTASHSTATE=1     #... if something is stashed($)
 export GIT_PS1_SHOWUNTRACKEDFILES=1 #... untracked files(%)
 
 export PS1='\n\[\e[$COL\]\u@\h \[\e[33m\]\w\[\e[1;30m\]$(__git_ps1 " (%s)")\[\e[0m\]\n\$'
+#export PS1='\n\[\e[$COL\]\u@\h \[\e[33m\]\w\[\e[1;30m\]\[\e[0m\]\n\$'
 
-source ~/bin/sdkpaths.sh
+SDKPATHS="~/bin/sdkpaths.sh"
+if [ -f $SDKPATHS ]; then source $SDKPATHS; fi
 
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
