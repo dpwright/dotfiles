@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 FILES_TO_INSTALL="
+	.Xresources
 	.bash_completion.d
 	.bash_profile
 	.config
