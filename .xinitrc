@@ -41,12 +41,18 @@ export XIM_ARGS="-r --daemonize --xim"
 
 ${XIM_PROGRAM} ${XIM_ARGS} &
 
+# Initialise esound
+esd -terminate -nobeeps -as 2 &
+
 # Always run VNC in the background
 x11vnc -display :0 -never-shared -forever -usepw &
 
-xsetroot -display :0.0 -solid Black &
+xsetroot -display :0.0 -solid "#002b36" &
 unclutter &
 numlockx
+
+# Libnotify listener (for irssi-libnotify)
+notify-listener.py &
 
 exec awesome
 
