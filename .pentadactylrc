@@ -4,5 +4,6 @@ loadplugins '\.(js|penta)$'
 group user
 set showtabline=never
 set hintkeys="asdfjkl;"
+colo solarized
 
 " vim: set ft=pentadactyl:
