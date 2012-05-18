@@ -6,7 +6,7 @@
 [core]
 	excludesfile = ~/.cvsignore
 [color]
-	ui = auto
+	ui = always
 [color "branch"]
 	current = yellow reverse
 	local = yellow
@@ -21,7 +21,7 @@
 	changed = green
 	untracked = cyan
 [alias]
-	st = status
+	st = status -sb
 	ci = commit
 	cia = commit --amend
 	co = checkout
@@ -38,8 +38,13 @@
 	ru = remote update
 	rp = remote prune
 	sm = submodule
-	lg = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	last = !git --no-pager log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lg = log --graph --pretty=format:'%Cred%h%Creset - %Cgreen(%cd)%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' --abbrev-commit --date=local
+	lgf = log --graph --pretty=format:'%Cred%H%Creset - %Cgreen(%cd)%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' --abbrev-commit --date=local
+	nm = !git name-rev --stdin --always --name-only
+	last = !git --no-pager lg -10
+	new  = !git --no-pager lg $1@{1}..$1@{0} "$@"
 	sub = submodule update --init --recursive 
+	dtl = show --pretty=format:'%Cred%h%Creset - %Cgreen(%cd)%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' --date=local --full-diff
+	who = shortlog -n -s --no-merges
 [github]
 	user = dpwright
