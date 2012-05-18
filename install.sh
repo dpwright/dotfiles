@@ -6,6 +6,7 @@ FILES_TO_INSTALL="
 	.bash_profile
 	.config
 	.cvsignore
+	.dir_colors
 	.fonts.conf
 	.gitconfig
 	.irssi
