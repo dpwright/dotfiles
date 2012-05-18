@@ -30,7 +30,9 @@ export PATH=~/bin:$PATH
 export PAGER="less -sR" #Can't remember why I switched to lv, and git logs etc are annoying
                         #when using it, so switching back to less for now
 
-alias ls='ls -G'
+export CLICOLOR=1
+eval `gdircolors ~/.dir_colors`
+
 alias vimroom='vim +VimroomToggle +mat "+set wrap"'
 alias vncd='x11vnc -usepw -display ":0"'
 alias tmux='tmux -2' #Enable 256-colour tmux by default
@@ -46,8 +48,7 @@ export GIT_PS1_SHOWDIRTYSTATE=1     #... untagged(*) and staged(+) changes
 export GIT_PS1_SHOWSTASHSTATE=1     #... if something is stashed($)
 export GIT_PS1_SHOWUNTRACKEDFILES=1 #... untracked files(%)
 
-export PS1='\n\[\e[$COL\]\u@\h \[\e[33m\]\w\[\e[1;30m\]$(__git_ps1 " (%s)")\[\e[0m\]\n\$'
-#export PS1='\n\[\e[$COL\]\u@\h \[\e[33m\]\w\[\e[1;30m\]\[\e[0m\]\n\$'
+export PS1='\n\[\e[$COL\]\u@\h \[\e[33m\]\w\[\e[1;32m\]$(__git_ps1 " (%s)")\[\e[0m\]\n\$'
 
 SDKPATHS="~/bin/sdkpaths.sh"
 if [ -f $SDKPATHS ]; then source $SDKPATHS; fi
