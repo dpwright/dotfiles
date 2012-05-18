@@ -1,6 +1,16 @@
 auto-reload yes
+
 show-read-feeds yes
 bind-key j next
 bind-key k prev
 bind-key J next-feed
 bind-key K prev-feed
+
+# solarized color scheme for newsbeuter <http://www.newsbeuter.org/>
+# more on solarized: http://ethanschoonover.com/solarized
+
+color listnormal default  default bold
+color listfocus  black  yellow bold
+color info       default  black bold
+color background default  default bold
+color article    default  default bold
