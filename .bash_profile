@@ -26,7 +26,9 @@ export LC_CTYPE=ja_JP.UTF-8
 
 export PATH=~/bin:$PATH
 
-export PAGER="lv -c"
+#export PAGER="lv -c"
+export PAGER="less -sR" #Can't remember why I switched to lv, and git logs etc are annoying
+                        #when using it, so switching back to less for now
 
 alias ls='ls -G'
 alias vimroom='vim +VimroomToggle +mat "+set wrap"'
