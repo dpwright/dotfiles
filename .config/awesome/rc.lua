@@ -12,10 +12,10 @@ require("naughty")
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init(awful.util.getdir("config") .. "/themes/default/theme.lua")
+beautiful.init(awful.util.getdir("config") .. "/themes/awesome-solarized/dark/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "sakura -e tmux"
+terminal = "gnome-terminal -e tmux"
 editor = os.getenv("EDITOR") or "vi"
 editor_cmd = terminal .. " -c " .. editor
 
@@ -220,11 +220,11 @@ globalkeys = awful.util.table.join(
     -- Custom program shortcuts
     awful.key({ modkey            }, "/",     function () awful.util.spawn("rikaisama") end),
     awful.key({ modkey            }, "w",     function () awful.util.spawn("firefox") end),
-    awful.key({ modkey            }, "v",     function () awful.util.spawn("sakura -t vim -e /bin/bash -l -c vim") end),
-    awful.key({ modkey            }, "m",     function () awful.util.spawn("sakura -t mutt -e /bin/bash -l -c mutt") end),
-    awful.key({ modkey            }, "n",     function () awful.util.spawn("sakura -t newsbeuter -e /bin/bash -l -c newsbeuter") end),
-    awful.key({ modkey            }, "i",     function () awful.util.spawn("sakura -t irssi -e /bin/bash -l -c irssi") end),
-    awful.key({ modkey            }, "a",     function () awful.util.spawn("sakura -e tmux attach") end),
+    awful.key({ modkey            }, "v",     function () awful.util.spawn("gnome-terminal -t vim -e /bin/bash -l -c vim") end),
+    awful.key({ modkey            }, "m",     function () awful.util.spawn("gnome-terminal -t mutt -e /bin/bash -l -c mutt") end),
+    awful.key({ modkey            }, "n",     function () awful.util.spawn("gnome-terminal -t newsbeuter -e /bin/bash -l -c newsbeuter") end),
+    awful.key({ modkey            }, "i",     function () awful.util.spawn("gnome-terminal -t irssi -e /bin/bash -l -c irssi") end),
+    awful.key({ modkey            }, "a",     function () awful.util.spawn("gnome-terminal -e tmux attach") end),
 
     -- Prompt
     awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),
