@@ -29,6 +29,7 @@
 	sb = show-branch
 	cp = cherry-pick
 	staged = diff --cached
+	unstage = reset HEAD
 	rb = rebase
 	rbc = rebase --continue
 	rbs = rebase --skip
@@ -42,9 +43,13 @@
 	lgf = log --graph --pretty=format:'%Cred%H%Creset - %Cgreen(%cd)%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' --abbrev-commit --date=local
 	nm = !git name-rev --stdin --always --name-only
 	last = !git --no-pager lg -10
+	lastn = !git --no-pager lgf -10 | git nm
 	new  = !git --no-pager lg $1@{1}..$1@{0} "$@"
 	sub = submodule update --init --recursive 
-	dtl = show --pretty=format:'%Cred%h%Creset - %Cgreen(%cd)%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' --date=local --full-diff
+	dtl = show --pretty=format:'%Cred%h%Creset - %Cgreen(%cd)%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset\n\n%b\n---' --date=local --full-diff
 	who = shortlog -n -s --no-merges
+	fetchall = "!git remote | while read REMOTE; do git fetch $REMOTE; done"
+	fa = !git fetchall
+	dt = "!f() { vim -p $(git diff --name-only $@ | grep -v '.axf$' | grep -v '.map$' | grep -v '.amx$' | grep -v '.bxml$') +\"tabdo Gdiff $@\" +tabfirst; }; f"
 [github]
 	user = dpwright
