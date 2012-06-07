@@ -48,8 +48,7 @@
 	sub = submodule update --init --recursive 
 	dtl = show --pretty=format:'%Cred%h%Creset - %Cgreen(%cd)%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset\n\n%b\n---' --date=local --full-diff
 	who = shortlog -n -s --no-merges
-	fetchall = "!git remote | while read REMOTE; do git fetch $REMOTE; done"
-	fa = !git fetchall
+	fa = fetch --all
 	dt = "!f() { vim -p $(git diff --name-only $@ | grep -v '.axf$' | grep -v '.map$' | grep -v '.amx$' | grep -v '.bxml$') +\"tabdo Gdiff $@\" +tabfirst; }; f"
 [github]
 	user = dpwright
