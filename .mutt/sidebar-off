@@ -1,0 +1,9 @@
+unset sidebar_visible
+
+macro index b '<enter-command>source ~/.mutt/sidebar-on<enter><refresh>'
+macro pager b '<enter-command>source ~/.mutt/sidebar-on<enter><redraw-screen>'
+
+bind index,pager j        next-undeleted
+bind index,pager k        previous-undeleted
+bind index       <Return> display-message
+bind pager       <Return> next-line

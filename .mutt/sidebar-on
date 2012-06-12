@@ -1,0 +1,11 @@
+set sidebar_visible
+
+macro index b '<enter-command>source ~/.mutt/sidebar-off<enter><refresh>'
+macro pager b '<enter-command>source ~/.mutt/sidebar-off<enter><redraw-screen>'
+
+bind index,pager j sidebar-next
+bind index,pager k sidebar-prev
+
+bind index,pager \CO sidebar-open
+
+macro index,pager <Return> "\COb"
