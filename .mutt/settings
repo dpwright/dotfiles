@@ -1,6 +1,6 @@
 set header_cache     =~/.mutt/cache/headers
-set message_cachedir =~/.mutt/cache/bodies
-set certificate_file =~/.mutt/certificates
+#set message_cachedir =~/.mutt/cache/bodies
+#set certificate_file =~/.mutt/certificates
 
 set editor = "vim +/^$/+1 +:nohl +':set tw=72'"
 set attribution = "\n\n%n (%d) >>"
