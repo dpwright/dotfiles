@@ -15,7 +15,7 @@ require("naughty")
 beautiful.init(awful.util.getdir("config") .. "/themes/awesome-solarized/dark/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "gnome-terminal -e tmux"
+terminal = "gnome-terminal"
 editor = os.getenv("EDITOR") or "vi"
 editor_cmd = terminal .. " -c " .. editor
 
