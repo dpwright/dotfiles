@@ -36,6 +36,8 @@ eval `gdircolors ~/.dir_colors`
 alias vimroom='vim +VimroomToggle +mat "+set wrap"'
 alias vncd='x11vnc -usepw -display ":0"'
 alias tmux='tmux -2' #Enable 256-colour tmux by default
+alias tig='tig --topo-order' #Topological order is usually the most useful; use date-order to
+                             #get a clearer picture of how each person's branches relate
 
 #Linux works differently
 if [ "${OSTYPE}" == "linux-gnu" ] || [ "${OSTYPE}" == "linux" ]; then
