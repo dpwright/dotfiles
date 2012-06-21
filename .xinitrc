@@ -39,6 +39,7 @@ export XMODIFIERS=@im=ibus
 export XIM_PROGRAM="ibus-daemon"
 export XIM_ARGS="-r --daemonize --xim"
 
+mozc_server_restart
 ${XIM_PROGRAM} ${XIM_ARGS} &
 
 # Initialise esound
