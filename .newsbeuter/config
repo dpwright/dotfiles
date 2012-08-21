@@ -9,8 +9,8 @@ bind-key K prev-feed
 # solarized color scheme for newsbeuter <http://www.newsbeuter.org/>
 # more on solarized: http://ethanschoonover.com/solarized
 
-color listnormal default  default bold
-color listfocus  black  yellow bold
-color info       default  black bold
-color background default  default bold
-color article    default  default bold
+color listnormal default  default
+color listfocus  black  yellow
+color info       yellow  black
+color background default  default
+color article    default  default
