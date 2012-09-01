@@ -12,10 +12,10 @@
 	local = yellow
 	remote = green
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
+	meta = yellow
+	frag = magenta
+	old = red
+	new = green
 [color "status"]
 	added = yellow
 	changed = green
@@ -39,17 +39,19 @@
 	ru = remote update
 	rp = remote prune
 	sm = submodule
-	lg = log --graph --pretty=format:'%Cred%h%Creset - %Cgreen(%cd)%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' --abbrev-commit --date=local
-	lgf = log --graph --pretty=format:'%Cred%H%Creset - %Cgreen(%cd)%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' --abbrev-commit --date=local
+	lg = log --graph --pretty=format:'%Cred%h%Creset - %Cgreen(%ad)%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' --abbrev-commit --date=local
+	lgf = log --graph --pretty=format:'%Cred%H%Creset - %Cgreen(%ad)%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset' --abbrev-commit --date=local
 	nm = !git name-rev --stdin --always --name-only
 	last = !git --no-pager lg -10
 	lastn = !git --no-pager lgf -10 | git nm
 	new  = !git --no-pager lg $1@{1}..$1@{0} "$@"
 	sub = submodule update --init --recursive 
-	dtl = show --pretty=format:'%Cred%h%Creset - %Cgreen(%cd)%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset\n\n%b\n---' --date=local --full-diff
+	dtl = show --pretty=format:'%Cred%h%Creset - %Cgreen(%ad)%C(yellow)%d%Creset %s %C(bold blue)<%an>%Creset\n\n%b\n---' --date=local --full-diff
 	who = shortlog -n -s --no-merges
 	fa = fetch --all
 	dt = "!f() { vim -p $(git diff --name-only $@ | grep -v '.axf$' | grep -v '.map$' | grep -v '.amx$' | grep -v '.bxml$') +\"tabdo Gdiff $@\" +tabfirst; }; f"
 	amend-commit = "!f() { START=`(git symbolic-ref -q HEAD || git rev-parse HEAD) | cut -d"/" -f 3`; git checkout -q $1 && git commit --amend && git rebase --onto HEAD $1 $START; }; f"
 [github]
 	user = dpwright
+[mergetool]
+	keepBackup = false
