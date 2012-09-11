@@ -1,0 +1,18 @@
+# vim: filetype=muttrc
+#       type       foreground      background   regex
+color   body       yellow          default      "^diff \-.*"
+color   body       yellow          default      "^index [a-f0-9].*"
+color   body       yellow          default      "^\-\-\- .*"
+color   body       yellow          default      "^[\+]{3} .*"
+color   body       green           default      "^[\+][^\+]+.*"
+color   body       red             default      "^\-[^\-]+.*"
+color   body       magenta         default      "^@@ .*"
+color   body       yellow          default      "^\-\- >8 \-\-$"
+
+color   body       cyan            default      "^Signed-off-by: .*$"
+color   body       cyan            default      "^Acked-by: .*$"
+color   body       cyan            default      "^Reported-by: .*$"
+color   body       cyan            default      "^Tested-by: .*$"
+color   body       cyan            default      "^Reviewed-by: .*$"
+color   body       cyan            default      "^Suggested-by: .*$"
+color   body       cyan            default      "^Cc: .*$"

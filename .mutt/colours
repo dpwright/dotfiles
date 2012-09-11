@@ -1,21 +1,57 @@
-#     type       foreground  background   regex
-color normal     white       black
-color attachment yellow      black
-color hdrdefault cyan        black
-color indicator  red         black
-color markers    brightred   black
-color quoted     green       black
-color signature  cyan        black
-color status     white       red
-color tilde      blue        black
-color tree       red         black
+# vim: filetype=muttrc
+#       type       foreground      background   regex
+set arrow_cursor=yes
+#--------------------------- GENERAL SETTINGS ---------------------------
+color   normal     default         default
+color   error      red             default
+color   tilde      black           default
+color   markers    brightred       default
+color   attachment yellow          default
+color   search     black           yellow
+color   indicator  yellow          black
+color   tree       yellow          default
 
-color index      brightblack black        ~D
-color index      magenta     black        ~T
-color index      yellow      black        ~U
+#--------------------------------- INDEX --------------------------------
+color   index      blue            default      "~P"                     # From me
+color   index      brightblack     default      "~D"                     # Deleted
+color   index      yellow          default      "~U"                     # Unread
+color   index      brightmagenta   default      "~U~p!~F"                # Unread messages to me
+color   index      cyan            default      "~Q"                     # Replied
 
-color header     black       red          "^Importance: high"
+color   index      red             black        "~s Jenkins.*失敗"
+color   index      green           black        "~s Jenkins.*正常"
 
-color body       brightblue  black        (https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9]+
-color body       brightred   black        [\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+
+color   index      magenta         default       "~s ^.*-svn\] ~p"
 
+color   index      red             default      "~f @nintendo\.co\.jp"
+color   index      brightred       default      "~Q ~f @nintendo\.co\.jp"
+color   index      magenta         default      "~f hiyokko | ~C hiyokko"
+color   index      brightmagenta   default      "~Q ~f hiyokko | ~C hiyokko"
+color   index      black           magenta      "~C wedding.dpwright\.com"
+
+#--------------------------------- BODY ---------------------------------
+color   hdrdefault yellow          default
+color   header     green           default      "^(From)"
+color   header     blue            default      "^(Subject)"
+color   header     black           red          "^Importance: high"
+
+color   quoted     blue            default
+color   quoted1    cyan            default
+color   quoted2    yellow          default
+color   quoted3    red             default
+color   quoted4    brightred       default
+
+color   bold       black           default
+color   underline  black           default
+
+#Header-like text in message body
+color   body       yellow          default      "^[^[:space:]]*: .+$"
+color   body       green           default      "^From: .+$"
+color   body       blue            default      "^Subject: .+$"
+
+#Email addresses and URLs
+color   body       red             default      "([a-z][a-z1-9+-]*://(((([a-z0-9_.!~*'();:&=+$,-]|%[0-9a-f][0-9a-f])*@)?((([a-z0-9]([a-z0-9-]*[a-z0-9])?)\\.)*([a-z]([a-z0-9-]*[a-z0-9])?)\\.?|[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+)(:[0-9]+)?)|([a-z0-9_.!~*'()$,;:@&=+-]|%[0-9a-f][0-9a-f])+)(/([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*(;([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*)*(/([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*(;([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*)*)*)?(\\?([a-z0-9_.!~*'();/?:@&=+$,-]|%[0-9a-f][0-9a-f])*)?(#([a-z0-9_.!~*'();/?:@&=+$,-]|%[0-9a-f][0-9a-f])*)?|(www|ftp)\\.(([a-z0-9]([a-z0-9-]*[a-z0-9])?)\\.)*([a-z]([a-z0-9-]*[a-z0-9])?)\\.?(:[0-9]+)?(/([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*(;([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*)*(/([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*(;([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*)*)*)?(\\?([-a-z0-9_.!~*'();/?:@&=+$,]|%[0-9a-f][0-9a-f])*)?(#([-a-z0-9_.!~*'();/?:@&=+$,]|%[0-9a-f][0-9a-f])*)?)[^].,:;!)? \t\r\n<>\"]"
+color   body       magenta         default      "((@(([0-9a-z-]+\\.)*[0-9a-z-]+\\.?|#[0-9]+|\\[[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\]),)*@(([0-9a-z-]+\\.)*[0-9a-z-]+\\.?|#[0-9]+|\\[[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\.[0-9]?[0-9]?[0-9]\\]):)?[0-9a-z_.+%$-]+@(([0-9a-z-]+\\.)*[0-9a-z-]+\\.?|#[0-9]+|\\[[0-2]?[0-9]?[0-9]\\.[0-2]?[0-9]?[0-9]\\.[0-2]?[0-9]?[0-9]\\.[0-2]?[0-9]?[0-9]\\])"
+
+color   body       white           default      "(^|[[:space:][:punct:]])\\*[^*]+\\*([[:space:][:punct:]]|$)"
+color   body       white           default      "(^|[[:space:][:punct:]])_[^_]+_([[:space:][:punct:]]|$)"
