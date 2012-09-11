@@ -1,4 +1,8 @@
+xterm*font: fixed
+xterm*boldFont: fixed
+xterm*allowBoldFonts: false
 xterm*cjk_width: true
+xterm*altSendsEscape: true
 
 !! drop in Solarized colorscheme for Xresources/Xdefaults
 
