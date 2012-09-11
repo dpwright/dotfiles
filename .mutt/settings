@@ -44,7 +44,14 @@ ignore "DKIM-Signature:"
 hdr_order Date From To Cc
 
 auto_view text/html
+auto_view application/pdf
+auto_view application/msword
+auto_view application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 alternative_order text/plain
+
+auto_view text/x-diff
+auto_view text/x-patch
+set allow_ansi
 
 #printpreview is a script I wrote which calls muttprint then opens the
 #output in the pdf viewer specified as the first argument

@@ -4,4 +4,11 @@ text/html; firefox -new-window %s & sleep 5; nametemplate=%s.html
 text/html; w3m -I %{charset} -dump %s; nametemplate=%s.html; copiousoutput
 image/*; evince %s; edit=gimp %s;
 application/pdf; apvlv %s; nametemplate=%s.pdf
-application/pdf; pdftotext -layout /dev/stdin -; copiousoutput
+application/pdf; pdftotext -enc UTF-8 -layout /dev/stdin -; copiousoutput
+application/msword; antiword %s; copiousoutput
+application/msexcel; xls2csv %s; copiousoutput
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; xlsxtotext %s; nametemplate=%s.xlsx; copiousoutput
+text/x-diff;  vimpatch svn+ssh://svn.vitei.com/svn/vitei/nsub %s
+text/x-diff;  cat %s;copiousoutput
+text/x-patch; vimpatch svn+ssh://svn.vitei.com/svn/vitei/nsub %s
+text/x-patch; cat %s;copiousoutput

@@ -1,0 +1,71 @@
+#!/usr/bin/env ruby
+# -*- coding: utf-8 -*-
+
+require 'csv'
+require 'roo'
+require 'stringio'
+
+def is_cjk? (c)
+	!!(c =~ /\p{Han}|\p{Katakana}|\p{Hiragana}|\p{Hangul}|[０-９]/)
+end
+
+class String
+	def wlength
+		self.each_char.inject(0){|l,c| is_cjk?(c)? l += 2 : l += 1}
+	end
+end
+
+def silent_warnings
+	old_stderr = $stderr
+	$stderr = StringIO.new
+	yield
+ensure
+	$stderr = old_stderr
+end
+
+xlsx = Excelx.new("#{ARGV[0]}")
+sheets = xlsx.sheets
+
+sheets.each do |sheet|
+	sheetname = sheet.strip
+	border = "=" * ((70 - sheetname.wlength) / 2)
+	extra = sheetname.wlength % 2 == 1 ? " " : ""
+	puts "#{border} #{extra}#{sheetname} #{border}\n\n"
+
+	sio = StringIO.new
+	silent_warnings do
+		old_stdout, STDOUT = STDOUT, sio
+		xlsx.to_csv(nil, sheet)
+		STDOUT = old_stdout
+	end
+	csv = sio.string
+
+	if not csv.strip.empty?
+		data = CSV.parse(csv)
+		row_max = data.collect{ |row| row.length }.max - 1
+		longest_string_in_col = []
+		for i in 0..row_max do
+			longest_string_in_col[i] = 0
+			data.each do |row|
+				if row[i]
+					longest_string_in_col[i] = row[i].wlength if row[i].wlength > longest_string_in_col[i]
+				end
+			end
+		end
+
+		data.each do |row|
+			row_max = row.length - 1
+			for i in 0..row_max do
+				if row[i]
+					extra_spaces = longest_string_in_col[i] - row[i].wlength
+					print "#{row[i] + " " * extra_spaces}"
+				else
+					print " " * longest_string_in_col[i]
+				end
+
+				print "    "
+			end
+			puts
+		end
+	end
+end
