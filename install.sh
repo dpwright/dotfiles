@@ -7,7 +7,6 @@ FILES_TO_INSTALL="
 	.config
 	.cvsignore
 	.dir_colors
-	.fonts.conf
 	.gitconfig
 	.irssi
 	.mailcap
