@@ -30,6 +30,8 @@ export PATH=~/bin:$PATH
 export PAGER="less -sR" #Can't remember why I switched to lv, and git logs etc are annoying
                         #when using it, so switching back to less for now
 
+export HISTSIZE=10000
+
 export CLICOLOR=1
 eval `gdircolors ~/.dir_colors`
 
