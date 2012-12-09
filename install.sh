@@ -2,7 +2,6 @@
 
 FILES_TO_INSTALL="
 	.Xresources
-	.bash_completion.d
 	.bash_profile
 	.config
 	.cvsignore
@@ -14,6 +13,7 @@ FILES_TO_INSTALL="
 	.muttprintrc
 	.muttrc
 	.newsbeuter
+	.offlineimap.utf7.py
 	.pentadactyl
 	.pentadactylrc
 	.ratpoison
