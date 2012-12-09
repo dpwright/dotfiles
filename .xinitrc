@@ -55,5 +55,5 @@ numlockx
 # Libnotify listener (for irssi-libnotify)
 notify-listener.py &
 
-exec awesome
+exec xmonad
 
