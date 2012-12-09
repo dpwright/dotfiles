@@ -3,7 +3,8 @@
 loadplugins '\.(js|penta)$'
 group user
 set showtabline=never
+set showstatuslinks=command
 set hintkeys="asdfjkl;"
-colo solarized
+set go=c
 
 " vim: set ft=pentadactyl:
