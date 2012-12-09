@@ -33,20 +33,27 @@ export PAGER="less -sR" #Can't remember why I switched to lv, and git logs etc a
 export HISTSIZE=10000
 
 export CLICOLOR=1
-eval `gdircolors ~/.dir_colors`
+eval `dircolors ~/.dir_colors`
 
 alias vimroom='vim +VimroomToggle +mat "+set wrap"'
 alias vncd='x11vnc -usepw -display ":0"'
 alias tmux='tmux -2' #Enable 256-colour tmux by default
 alias tig='tig --topo-order' #Topological order is usually the most useful; use date-order to
                              #get a clearer picture of how each person's branches relate
+alias hl="highlight -O ansi"
+
+hless() { highlight -O ansi $@ | less -R; }
 
 #Linux works differently
 if [ "${OSTYPE}" == "linux-gnu" ] || [ "${OSTYPE}" == "linux" ]; then
-	alias ls='ls --color=always'
+	alias ls='ls --color=auto'
 fi
 
-source ~/.bash_completion.d/*
+source ~/.bash_completion.d/git-completion.bash
+
+if [ -e ~/.bash_completion.d/git-prompt.sh ]; then
+	source ~/.bash_completion.d/git-prompt.sh
+fi
 
 export GIT_PS1_SHOWDIRTYSTATE=1     #... untagged(*) and staged(+) changes
 export GIT_PS1_SHOWSTASHSTATE=1     #... if something is stashed($)
