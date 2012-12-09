@@ -4,6 +4,22 @@ xterm*allowBoldFonts: false
 xterm*cjk_width: true
 xterm*altSendsEscape: true
 
+URxvt*scrollBar: false
+URxvt*loginShell: true
+!URxvt*font: xft:Monaco for Powerline:regular:size=8,xft:VL ゴシック:regular:size=8
+URxvt*font: xft:Monaco for Powerline:regular:size=8,xft:Droid Sans Fallback:regular:size=8
+URxvt*imFont: xft:Monaco for Powerline:regular:size=8,xft:Droid Sans Fallback:regular:size=8
+URxvt*boldFont: xft:Monaco for Powerline:regular:size=8,xft:Droid Sans Fallback:regular:size=8
+URxvt*italicFont: xft:Monaco for Powerline:italic:size=8,xft:Droid Sans Fallback:italic:size=8
+URxvt*boldItalicFont: xft:Monaco for Powerline:bold:italic:size=8,xft:Droid Sans Fallback:bold:italic:size=8
+
+URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select,vtwheel
+URxvt.url-select.launcher:  firefox -new-tab
+URxvt.url-select.underline: true
+URxvt.keysym.M-u:           perl:url-select:select_next
+URxvt.keysym.M-Escape:      perl:keyboard-select:activate
+URxvt.keysym.M-s:           perl:keyboard-select:search
+
 !! drop in Solarized colorscheme for Xresources/Xdefaults
 
 !!SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
@@ -42,42 +58,42 @@ xterm*altSendsEscape: true
 #define S_cyan          #2aa198
 #define S_green         #859900
 
-*background:            S_base03
-*foreground:            S_base00
+*background:            #002b36
+*foreground:            #657b83
 *fading:                40
-*fadeColor:             S_base03
-*cursorColor:           S_base1
-*pointerColorBackground:S_base01
-*pointerColorForeground:S_base1
+*fadeColor:             #002b36
+*cursorColor:           #93a1a1
+*pointerColorBackground:#586e75
+*pointerColorForeground:#93a1a1
 
 !! black dark/light
-*color0:                S_base02
-*color8:                S_base03
+*color0:                #073642
+*color8:                #002b36
 
 !! red dark/light
-*color1:                S_red
-*color9:                S_orange
+*color1:                #dc322f
+*color9:                #cb4b16
 
 !! green dark/light
-*color2:                S_green
-*color10:               S_base01
+*color2:                #859900
+*color10:               #586e75
 
 !! yellow dark/light
-*color3:                S_yellow
-*color11:               S_base00
+*color3:                #b58900
+*color11:               #657b83
 
 !! blue dark/light
-*color4:                S_blue
-*color12:               S_base0
+*color4:                #268bd2
+*color12:               #839496
 
 !! magenta dark/light
-*color5:                S_magenta
-*color13:               S_violet
+*color5:                #d33682
+*color13:               #6c71c4
 
 !! cyan dark/light
-*color6:                S_cyan
-*color14:               S_base1
+*color6:                #2aa198
+*color14:               #93a1a1
 
 !! white dark/light
-*color7:                S_base2
-*color15:               S_base3
+*color7:                #eee8d5
+*color15:               #fdf6e3
