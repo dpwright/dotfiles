@@ -62,3 +62,9 @@
 	user = dpwright
 [mergetool]
 	keepBackup = false
+[push]
+	default = simple
+[diff "excel"]
+	textconv=xlstotext
+[pull]
+	rebase = true
