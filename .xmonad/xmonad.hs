@@ -27,6 +27,7 @@ main = do
     xmonad $ defaultConfig
        { modMask = modm
        , terminal = "urxvt"
+       , focusFollowsMouse = False
        , workspaces = myWorkspaces
        , normalBorderColor = solarizedBase01
        , focusedBorderColor = solarizedYellow
