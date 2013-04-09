@@ -4,14 +4,11 @@
 require 'csv'
 require 'roo'
 require 'stringio'
-
-def is_cjk? (c)
-	!!(c =~ /\p{Han}|\p{Katakana}|\p{Hiragana}|\p{Hangul}|[０-９]/)
-end
+require 'unicode_utils/display_width'
 
 class String
 	def wlength
-		self.each_char.inject(0){|l,c| is_cjk?(c)? l += 2 : l += 1}
+		UnicodeUtils.display_width(self)
 	end
 end
 
