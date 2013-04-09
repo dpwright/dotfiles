@@ -6,7 +6,7 @@
 [core]
 	excludesfile = ~/.cvsignore
 [color]
-	ui = always
+	ui = auto
 [color "branch"]
 	current = yellow reverse
 	local = yellow
