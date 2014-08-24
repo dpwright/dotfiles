@@ -24,7 +24,7 @@ export EDITOR="vim"
 export LANG=ja_JP.UTF-8
 export LC_CTYPE=ja_JP.UTF-8
 
-export PATH=~/bin:$PATH
+export PATH=~/bin:~/.cabal/bin:$PATH
 
 #export PAGER="lv -c"
 export PAGER="less -sR" #Can't remember why I switched to lv, and git logs etc are annoying
